@@ -1,33 +1,33 @@
-function pegarDados() {
-    let foto = document.getElementById("foto");
-    let nomejogo = document.getElementById("nome");
-    let nota = document.getElementById("nota");
-    let desenvolvedora = document.getElementById("desenvolvedora");
-    let plataforma = document.getElementById("plataforma");
-    let genero = document.getElementById("genero");
-    let jogadores = document.getElementById("jogadores");
-    let datala = document.getElementById("data");
-    let trailer = document.getElementById("trailer");
-    let reviews = document.getElementById("reviews");
+function pegarJogos() {
+    let Imagem = document.getElementById("Imagem");
+    let Nome = document.getElementById("Nome");
+    let Nota = document.getElementById("Nota");
+    let Desenvolvedora = document.getElementById("Desenvolvedora");
+    let Plataforma = document.getElementById("Plataforma");
+    let Genero = document.getElementById("Genero");
+    let Jogadores = document.getElementById("Jogadores");
+    let Lancamento = document.getElementById("Lancamento");
+    let Trailer = document.getElementById("Trailer");
+    let Reviews = document.getElementById("Reviews");
 
     console.log("começando");
-    let nome = prompt("Qual usuário você deseja os dados?");
-    fetch(''+nome)
+    let nome = prompt ("Qual jogo você deseja os dados?");
+    fetch('http://localhost/Vapor/Jogos/'+nome)
     .then(
         response => response.json()
     )
     .then(
         data => {
-            foto.src = data.foto;
-            nomejogo.innerHTML = data.nomejogo;
-            nota.innerHTML = data.nota;
-            desenvolvedora.innerHTML = data.desenvolvedora;
-            plataforma.innerHTML = data.plataforma;
-            genero.innerHTML = data.genero;
-            jogadores.src = data.jogadores;
-            datala.innerHTML = data.datala;
-            trailer.src = data.trailer;
-            reviews.innerHTML = data.reviews;
+            Imagem.src = data.Imagem;
+            Nome.innerHTML = data.Nome;
+            Nota.innerHTML = data.Nota;
+            Desenvolvedora.innerHTML = data.Desenvolvedora;
+            Plataforma.innerHTML = data.Plataforma;
+            Genero.innerHTML = data.Genero;
+            Jogadores.innerHTML = data.Jogadores;
+            Lancamento.innerHTML = data.Lancamento;
+            Trailer.src = data.Trailer;
+            Reviews.innerHTML = data.reviews;
         }
     )
 }         
