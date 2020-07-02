@@ -9,6 +9,14 @@
     <style>
         body,html{
         height:100%;
+        background-image:url(logo.png);
+        background-attachment: fixed;
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: left;
+        }
+        #thumb{
+            max-width: 50px; max-height: 50px;
         }
     </style>
 </head>
@@ -18,7 +26,7 @@
             <section class="row h-100 justify-content-center align-items-center">
                                 
                 <form class="col-3">
-                    <h2>Login</h2>
+                    <h2><img id="thumb" src="logo.png" alt="logo" >Login</h2>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Usuário</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Usuário">
